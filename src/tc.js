@@ -28,35 +28,24 @@ async function run() {
     history: [],
   });
 
-  // let userInput = `Give test plan in tabular form for a login form. Give only test plan nothing else`;
-  // let userInput = `Give test plan for a login form.`;
+  // let userInput = `Give test cases in tabular form for a login form. Give only test cases`;
 
   let userInput = `
-  Generate a test plan in tabular format:-
+  Generate a test case in tabular format:-
 
   Parameters:-
-  | IDENTIFIER | TEST PLAN |
-  |---|---|
-  | INTRODUCTION |  |
-  | TEST ITEMS |  |
-  | FEATURES TO BE TESTED |  |
-  | FEATURES NOT TO BE TESTED |  |
-  | APPROACH |  |
-  | ITEM PASS/FAIL CRITERIA |  |
-  | SUSPENSION AND RESUMPTION CRITERIA |  |
-  | REQUIREMENTS AND TEST DELIVERABLES |  |
-  | TESTING TASK |  |
-  | ENVIRONMENTAL NEEDS |  |
-  | RESPONSIBILITIES |  |
-  | STAFFING AND TRAINING NEEDS |  |
-  | SCHEDULE |  |
-  | RISKS AND CONTINGENCIES |  |
-  | APPROVALS |  | (leave it empty)
+  ID
+  SPECIFICATION
+  OBJECTIVE
+  INPUT DATA
+  EXPECTED OUTPUT
+  ACTUAL OUTPUT (leave it empty)
+  STATUS (leave it empty)
 
   Topic & Discription:-
-  NGO website for animals
+  Contacts page for an NGO website for animals
 
-  (Important: Generate only test plan in tabular format and nothing else!)
+  (Important: Generate only test cases in tabular format and nothing else!)
   `;
 
 
@@ -70,9 +59,9 @@ async function run() {
   //   else console.log(`Data saved to output.md`);
   // });
 
-  fs.appendFile(`output3.md`, output + "\n", (err) => {
+  fs.appendFile(`markdown/tc-op.md`, output + "\n\n---", (err) => {
     if (err) console.error("Error appending to file:", err);
-    else console.log(`Data appended to output3.md`);
+    else console.log(`Data appended to output2.md`);
   });
 }
 
