@@ -90,7 +90,7 @@ const {
       //   else console.log(`Data saved to output.md`);
       // });
 
-      fs.appendFile(`markdown/tp-op.md`, output + "\n\n---", (err) => {
+      fs.appendFile(`output/tp-op.md`, output + "\n\n---\n\n", (err) => {
         if (err) console.error("Error appending to file:", err);
         else console.log(`Data appended to output3.md`);
       });
